@@ -75,13 +75,29 @@ function waitforme(ms)  {
 	    setTimeout(()=> {resolve('')} ,ms );
 	});
 }
+var is_badd = 0;
+function p() {
+	if(is_badd === 0)
+		is_badd = 1;
+	else
+		is_badd = 0;
+
+}
 function set_start(id) {
-	document.getElementById(start_point).style.backgroundColor = "white";
+	if(id === end_point){
+		return;
+	}
+	walls[id_to_index[id]] = 0;
+	document.getElementById(start_point).style = "outline: 1px solid cyan;background-color:white";
 	document.getElementById(id).style.backgroundColor = "lightgreen";
 	start_point = id;
 }
 function set_end(id) {
-	document.getElementById(end_point).style.backgroundColor = "white";
+	if(id === start_point){
+		return;
+	}
+	walls[id_to_index[id]] = 0;	
+	document.getElementById(end_point).style = "outline: 1px solid cyan;background-color:white";
 	document.getElementById(id).style.backgroundColor = "orange";
 	end_point = id;
 }
@@ -97,6 +113,7 @@ function add_wall(i) {
 			walls[index] = 0;
 		}
 }
+var is_wall_on = 0;
 function change_stats(i){
 	if(i === 'start'){
 		document.getElementById('end').style.color = "black";
@@ -111,6 +128,7 @@ function change_stats(i){
 		stats = '3';
 	}
 	else if (i === 'wall'){
+		is_wall_on = 1;
 		document.getElementById('end').style.color = "black";
 		document.getElementById('start').style.color = "black";
 		document.getElementById(i).style.color = "orange";
@@ -119,6 +137,8 @@ function change_stats(i){
 	// console.log(stats);
 }
 function process(i){
+	if(is_badd === 0)
+		return;
 	if(stats === '1'){
 		add_wall(i);
 	}else if(stats === '2'){
@@ -132,11 +152,12 @@ function load(){
 		for(let i = 0;i<14;i++){
 			for(let j = 0;j<50;j++){
 				id = i+":"+j;
-				to_put += '<button  class="cell" onclick = "process(\''+id+'\')" id = "'+id+'"></button>'
+				to_put += '<button  class="cell" onmouseover="process(\''+id+'\')" onclick = "p()" id = "'+id+'"></button>'
 			}
 		}
 		document.getElementById('grid').innerHTML = ''+to_put+'';
 }
+
 async function dfs(graph,visited,node,ms){
 	visited[node] = 1;
 	if(walls[node] === 1)
@@ -166,6 +187,19 @@ async function dfs(graph,visited,node,ms){
 		}
 	}
 }
+function hovers(i){
+	if(is_wall_on === 1){
+		add_wall(i);
+	}
+}
+// function load(){
+// 	var to_put = "";
+// 	for(let i = 0;i<14;i++){
+// 		for(let j = 0;j<50;j++)
+// 			to_put+='<button class="cell" onmouseover = "process(\''+i+':'+j+'\')" onclick="process(\''+i+':'+j+'\')" id="'+i+':'+j+'"></button><button class="cell" onclick="process('+i+':'+j+')" id="'+i+':'+j+'"></button>';
+// 	}
+// 	document.getElementById('grid').innerHTML = to_put;
+// }
 function find_path(argument) {
 	init2();
 is_done = 0;

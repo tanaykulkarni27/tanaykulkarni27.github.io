@@ -4,6 +4,15 @@ var index_to_id = {0: '0:0', 1: '0:1', 2: '0:2', 3: '0:3', 4: '0:4', 5: '0:5', 6
 var start_point = '3:5';
 var end_point = '5:3';
 var is_done = 0;
+var is_badd = 0;
+function p() {
+	if(is_badd === 0)
+		is_badd = 1;
+	else
+		is_badd = 0;
+
+}
+
 function set_pattern(i){
 	if(i.value === "ARROW")
 		arrows_pattern();
@@ -74,14 +83,6 @@ function waitforme(ms)  {
 	return new Promise( resolve => {
 	    setTimeout(()=> {resolve('')} ,ms );
 	});
-}
-var is_badd = 0;
-function p() {
-	if(is_badd === 0)
-		is_badd = 1;
-	else
-		is_badd = 0;
-
 }
 function set_start(id) {
 	if(id === end_point){

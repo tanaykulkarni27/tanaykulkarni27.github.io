@@ -1,5 +1,5 @@
 function get_json(url) {
-   url = 'https://cors-anywhere.herokuapp.com/'+url;
+//    url = 'https://cors-anywhere.herokuapp.com/'+url;
    const axios = require('axios').default;
    axios.get(url)
         .then(function (response) {

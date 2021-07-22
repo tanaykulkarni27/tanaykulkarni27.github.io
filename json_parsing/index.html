@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<title>JSON PARSING EXAMPLE </title>
 	<script type="text/javascript" src="index.js"></script>
-	<!-- <script type="text/javascript" src="require.js"></script> -->
-	<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<style type="text/css">
 		.cc{
@@ -14,11 +14,57 @@
 		}
 	</style>
 </head>
-<body>
-	<button onclick="load()">load</button>
-	<div class="mypanel"></div>
-	<div id = "resp">
-		
-	</div>
+<body onload = "load()">
+
+	<div id = "cht"  style="width: 900px; height: 300px;font-size: 1px;"></div>
+	<button id="shw" onclick="add(this)">SHOW ALL 50</button>
+	<div class="tbl" id="tbl"></div>
 </body>
+</html><!DOCTYPE html>
+2
+<html>
+3
+<head>
+4
+        <meta charset="utf-8">
+5
+        <title>JSON PARSING EXAMPLE </title>
+6
+        <script type="text/javascript" src="index.js"></script>
+7
+        <!-- <script type="text/javascript" src="require.js"></script> -->
+8
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+9
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+10
+        <style type="text/css">
+11
+                .cc{
+12
+                        border: 1px solid cyan;
+13
+                        /*background-color: cyan;*/
+14
+                }
+15
+        </style>
+16
+</head>
+17
+<body>
+18
+        <button onclick="load()">load</button>
+19
+        <div class="mypanel"></div>
+20
+        <div id = "resp">
+21
+                
+22
+        </div>
+23
+</body>
+24
 </html>
+25

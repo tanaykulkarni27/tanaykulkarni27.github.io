@@ -24,7 +24,7 @@ async function get_json(url) {
 }
 function load(){
     var URL = 'https://jsonplaceholder.typicode.com/todos?_limit=5';
-    URL = "https://appfeeds.moneycontrol.com/jsonapi/market/marketmap&format=&type=0&ind_id=9";
+//     URL = "https://appfeeds.moneycontrol.com/jsonapi/market/marketmap&format=&type=0&ind_id=9";
     get_json(URL);
 }
 // "https://appfeeds.moneycontrol.com/jsonapi/market/marketmap&format=&type=0&ind_id=9"

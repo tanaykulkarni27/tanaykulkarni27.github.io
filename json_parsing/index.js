@@ -4,9 +4,9 @@ function get_json_2(URL) {
     var setting =  
     fetch(URL,{
         header:{
-            'mode': 'no-cors',
+            mode: 'no-cors',
             'Access-Control-Allow-Origin': '*'    
-        }
+        },
         
     }).then(response=>{
         return response.json();
@@ -30,7 +30,7 @@ function get_json_2(URL) {
             }
             document.getElementById('tbl').innerHTML = whole;
     }).catch(error=>{
-        console.log(error);
+        console.error(error);
     });
     // alert(whole);
 

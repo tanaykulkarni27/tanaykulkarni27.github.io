@@ -1,17 +1,22 @@
 var arranged_data = "";  
-function get_json_2(URL) {
+async function get_json_2(URL) {
     var whole = '<table class = "cc"><td class="cc">SR.NO</td><td class="cc">SHORTNAME</td><td class="cc">MARKET CAPTURE</td><td class="cc">MORE INFO</td>';
-    var setting =  
-    fetch(URL,{
-        header:{
-            mode: 'no-cors',
-            'Access-Control-Allow-Origin': '*'    
-        },
-        
-    }).then(response=>{
+    // var setting =  
+    const myHeaders = new Headers();
+    myHeaders.append('Content-Type', 'text/plain');
+    myHeaders.append('Access-Control-Allow-Origin', '*');
+    // myHeaders.append('mode', 'no-cors');
+    const req = new Request(URL,{
+        method: 'GET',
+        headers: myHeaders,
+        mode:'no-cors'
+    });
+    fetch(req).then(response=>{
         return response.json();
     }).then(items=>{
-        var arr = items["item"];
+            console.log(items);
+            var arr = items["item"];
+            // console.log(arr)
             let cnt = 0;
             let j = 1;
             for(let i = arr.length-1;i>=0;i--){
@@ -30,7 +35,7 @@ function get_json_2(URL) {
             }
             document.getElementById('tbl').innerHTML = whole;
     }).catch(error=>{
-        console.error(error);
+        console.log(error);
     });
     // alert(whole);
 
@@ -79,8 +84,8 @@ function add(i){
 }
 function load(){
     var URL = 'https://jsonplaceholder.typicode.com/todos?_limit=5';
-    URL = "https://cors-anywhere.herokuapp.com/appfeeds.moneycontrol.com/jsonapi/market/marketmap&format=&type=0&ind_id=9";
-    // URL = "https://appfeeds.moneycontrol.com/jsonapi/market/marketmap&format=&type=0&ind_id=9";
+    // URL = "https://cors-anywhere.herokuapp.com/appfeeds.moneycontrol.com/jsonapi/market/marketmap&format=&type=0&ind_id=9";
+    URL = "https://appfeeds.moneycontrol.com/jsonapi/market/marketmap&format=&type=0&ind_id=9";
     get_json_2(URL);
 }
 // "https://appfeeds.moneycontrol.com/jsonapi/market/marketmap&format=&type=0&ind_id=9"

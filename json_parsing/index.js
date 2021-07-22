@@ -1,17 +1,17 @@
 async function get_json(url) {
-       var whole = "";
+       var whole = '<table class = "cc"><td class="cc">SHOP NAME</td><td class="cc">MARKET CAPTURE</td><td class="cc">THERE SITE</td>';
        try{
+
             const resp = await axios.get(url);
             const items = resp.data;
-            for(let i = 0;i<items.length;i++){
-                var each = items[i];
+            var arr = items["item"];
+            for(let i = 0;i<arr.length;i++){
+                var each = arr[i];
                 var s = '<tr class = "cc">';
-                s += '<td>'+each['userId']+'</td>';
-                s += '<td>'+each['title']+'</td>';
-                if( each['completed'] == false)
-                    s += '<td>'+'NO'+'</td>';
-                else
-                    s += '<td>'+'YES'+'</td>';
+                s += '<td class = "cc">'+each['shortname']+'</td>';
+                s += '<td class = "cc">'+each['mktcap']+'</td>';
+                s += '<td class = "cc">'+'<a href = "'+each['url']+'">'+'VISIT'+'</a></td>';
+                
                 s += '</tr>'
                 whole += s;
             }
@@ -19,12 +19,12 @@ async function get_json(url) {
         catch(Errors){
             console.log(Errors);
         }
-        document.getElementById('resp').innerHTML = '<table>'+whole+'</table>';
+        document.getElementById('resp').innerHTML = whole+'</table>';
    
 }
 function load(){
     var URL = 'https://jsonplaceholder.typicode.com/todos?_limit=5';
-//     URL = "https://appfeeds.moneycontrol.com/jsonapi/market/marketmap&format=&type=0&ind_id=9";
+    URL = "https://appfeeds.moneycontrol.com/jsonapi/market/marketmap&format=&type=0&ind_id=9";
     get_json(URL);
 }
 // "https://appfeeds.moneycontrol.com/jsonapi/market/marketmap&format=&type=0&ind_id=9"

@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="./index.css" rel="stylesheet">
+		<script src="./index.js"></script>
+	</head>
+	<body onload="load()">
+		<button class="btn" onclick="BFS(0)">FIND PATH</button>
+		<button class="btn" onclick="load()">CLEAR BOARD</button>
+		<!-- START POINT CODE -->
+	&nbsp;&nbsp;&nbsp;&nbsp;<br><br><br><img src="cl.png" style="width: 15px;">&nbsp;START NODE
+		<!-- EXTRA NODE CODE -->
+	&nbsp;&nbsp;&nbsp;&nbsp;<img src="weight.png" style="width: 15px;">&nbsp;WEIGHT NODE
+	<!-- END POINT CODE -->
+	&nbsp;&nbsp;&nbsp;&nbsp;<img src="tg.png" style="width: 15px;">&nbsp;END NODE
+	<!-- VISITED CELL CODE -->
+	&nbsp;&nbsp;&nbsp;&nbsp;<img src="visited.png" style="width: 15px;">&nbsp;VISITED NODE
+	<!-- PATH CODE -->
+	&nbsp;&nbsp;&nbsp;&nbsp;<img src="path.jpeg" style="width: 15px;">&nbsp;PATH<br><br>
+	<font color="red">&nbsp;&nbsp;&nbsp;PATH : START_NODE -> WEIGHT_NODE -> END_NODE</font>
+	<br><br>
+		<div class="board" align="center">
+			<div id="row" class="grid">
+				
+			</div>
+		</div>
+	</body>
+</html>

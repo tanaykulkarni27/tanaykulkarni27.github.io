@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<link rel="icon" href="https://tanaykulkarni27.github.io/shop/images/logo.png" type="image/icon type">
+		<script src="index.js"> </script>
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body onload="load()">
+		<div align="center">
+			<div class="card" style="margin-top:15px;width: 38rem;box-shadow:2px 2px 1px gray;">
+				<form method="get" onsubmit="return validate()" id="frm">
+					<div class="card-body">
+						<h3 style="float:left;" class="card-title" style="text-shadow:2px 2px 1px gray;">FILL DETAILS</h3>
+						<div class="form-group">						
+							<input id="fname" class="form-control" type="text" class="text_box" placeholder="Enter your name"><br>
+							
+							<input type="email" id="email" class="form-control" placeholder="email"><br>
+							<input type="number" id="nmb" class="form-control" placeholder="Mobile number"><br>
+							<div class="input-group mb-3">
+								<input id="pwd" type="password" class="form-control" placeholder="Password">
+								<div class="input-group-append">
+									<span class="input-group-text" id="basic-addon1"><button  type="button" onclick="handle(this)" id = "show" class="eye_btn"><i class="fa fa-eye"></i></button><button type="button" onclick="handle(this)" id = "hide" style="display:none;" class="eye_btn"><i class="fa fa-eye-slash"></i></button></span>
+								</div>
+							</div>						
+							<input type="password" id="pwd2" class="form-control" placeholder="Re-enter password"><br>
+							<textarea id="addr" class="form-control" style="resize:none;" placeholder="Address"></textarea><br>
+							<input type="number" style="width:100px; float:left;" id="pncd"  class="form-control" placeholder="Pincode">&nbsp;
+							<select onclick="nxt(this)" class="dists" id="dists">
+								<option value="none">None</option>
+							</select>
+							<select style="display:none;" onclick="tlks(this)" class="dists" id="tlks">
+								<option value="none">None</option>
+							</select>
+						</div>
+					</div>
+					<button onclick="validate()" align="center" type="submit()" class="submit_button" >Get In</button>
+				</form>
+			</div>
+		</div>
+		
+	</body>
+</html>
+

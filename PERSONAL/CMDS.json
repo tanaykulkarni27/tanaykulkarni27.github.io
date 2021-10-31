@@ -1,0 +1,18 @@
+[
+    {
+        "voice": "open google",
+        "cmd"  :"start chrome www.google.com"
+    },
+    {
+        "voice": "open youtube",
+        "cmd"  :"start chrome www.youtube.com"
+    },
+    {
+        "voice": "play songs",
+        "cmd"  :"start chrome www.spotify.com"
+    },
+    {
+        "voice": "play grateful",
+        "cmd"  :"start chrome https://www.youtube.com/watch?v=83RUhxsfLWs"
+    }
+]

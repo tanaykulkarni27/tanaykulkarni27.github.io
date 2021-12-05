@@ -1,3 +1,14 @@
+function f() {
+		document.getElementById('main_page').style.display = 'none';
+		document.getElementById('documentation').style.visibility = 'visible';
+}
+function close_form(){
+	document.getElementById('main_page').style.display = 'block';
+	document.getElementById('documentation').style.display = 'none';
+}
+function append_url(){
+	document.getElementById('txt').value += '["URL:https://"]';
+}
 function append_bold(){
 	document.getElementById('txt').value += '["B"]';
 }
@@ -51,11 +62,35 @@ async function something_func(){
 	});
 }
 function decode(){
-	something_func().then(rt=>{
-		document.write(rt);
+	something_func().then(txt=>{
+		var to_put = "";
+		for(var i = 0;i < txt.length;i++){
+			var FLIP_FLOP = false;
+			if(txt.substr(i,6) == '["URL:'){
+				var j= i + 6;
+				var URL = "";
+				while(j < txt.length && txt[j] != '"'){
+					URL += txt[j];
+					j++;
+				}
+				URL = '<a href="'+URL+'">';
+				j++;
+				var inner_txt = "";
+				while(j < txt.length && txt[j] != ']'){
+					inner_txt += txt[j];
+					j++;
+				}
+				if(txt[j] == ']'){
+					URL += inner_txt + '</a>';
+					FLIP_FLOP = true;
+					i = j;
+					to_put += URL;
+				}
+			}
+			if(!FLIP_FLOP){
+				to_put += txt[i];
+			}
+		}
+		document.write(to_put);
 	});
 }
-
-// ["B" tanay ]
-// ["A" tanay ]
-// ["I" tanay ]

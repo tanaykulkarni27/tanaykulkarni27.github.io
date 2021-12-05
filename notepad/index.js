@@ -14,9 +14,18 @@ async function something_func(){
 		x['<i>'] = '</i>';
 		x['<ins>'] = '</ins>';
 		var txt = document.getElementById('txt').value;
-		txt = txt.replace('["B"','<b>')
-		txt = txt.replace('["A"','<ins>')
-		txt = txt.replace('["I"','<i>')
+		while(txt.includes('/\\n/')){
+			txt = txt.replace('/\\n/','<br>');	
+		}
+		while(txt.includes('["B"')){
+			txt = txt.replace('["B"','<b>')
+		}
+		while(txt.includes('["A"')){
+			txt = txt.replace('["A"','<ins>')		
+		}
+		while(txt.includes('["I"')){
+			txt = txt.replace('["I"','<i>');
+		}
 		var tmp = new Array();
 		var to_put = "";
 		var n = txt.length;
@@ -43,7 +52,6 @@ async function something_func(){
 }
 function decode(){
 	something_func().then(rt=>{
-		console.log(rt);
 		document.write(rt);
 	});
 }

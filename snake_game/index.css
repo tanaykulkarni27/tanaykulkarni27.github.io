@@ -1,0 +1,24 @@
+.cell{
+	width: 45px;
+	height: 45px;
+	
+}
+.food{
+	width: 45px;
+	height: 45px;
+	/*border:1px solid #989898;	*/
+}
+.snake_body{
+	width: 45px;
+	height: 45px;
+	background-color: #989898;
+	border:0px solid black;
+	border-radius: 5px;
+	/*border:1px solid #989898;*/
+	/*content: "body";	*/
+}
+.board{
+	display: inline-grid;
+	grid-template-columns: auto	 auto auto auto auto auto auto auto auto auto;
+	border:1px solid #989898;
+}

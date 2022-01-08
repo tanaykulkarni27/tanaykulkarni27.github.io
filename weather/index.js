@@ -1,4 +1,4 @@
-var url = "http://api.weatherapi.com/v1/current.json?key=b174e5277ff44a7b9cd94407220801&q=Maharashtra";
+var url = "https://api.weatherapi.com/v1/current.json?key=b174e5277ff44a7b9cd94407220801&q=Maharashtra";
 fetch(url).then((response)=>{
 
 	return response.json();

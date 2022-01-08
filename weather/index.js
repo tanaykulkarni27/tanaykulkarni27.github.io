@@ -9,7 +9,7 @@ fetch(url).then((response)=>{
 	document.getElementById('region').innerHTML = "Region : "+res.location.region;
 	document.getElementById('temp').innerHTML = "Temperature : "+res.current.temp_c+"Deg";
 	document.getElementById('wind_speed').innerHTML = "Wind Speed : "+res.current.wind_kph+"Km/h";
-	document.getElementById('condition').innerHTML = "Wind Speed : "+res.current.condition.text;
+	document.getElementById('condition').innerHTML = "Wind condition : "+res.current.condition.text;
 	document.getElementById('humidity').innerHTML = "Humidity : "+res.current.humidity+"%";
 	
 });

@@ -10,7 +10,7 @@
 	border:0px solid cyan;
 	width:25px;
 	height:25px;
-	background-image:url(/images/weight.png);
+	background-image:url(images/weight.png);
 	background-size: contain;
 }
 .Epath{
@@ -19,14 +19,14 @@
 	border:0px solid cyan;
 	width:25px;
 	height:25px;
-	background-image:url(/images/tg.png);
+	background-image:url(images/tg.png);
 	background-size: contain;
 }
 .Spath{
 	border:0px solid cyan;
 	width:25px;
 	height:25px;
-	background-image:url(/images/cl.png);
+	background-image:url(images/cl.png);
 	background-color:yellow;
 	background-size: contain;
 }
@@ -51,7 +51,7 @@
 	border:1px solid cyan;
 	width:25px;
 	height:25px;
-	background-image:url(/images/weight.png);
+	background-image:url(images/weight.png);
 	background-size: contain;
 }
 .end{
@@ -60,14 +60,15 @@
 	border:1px solid cyan;
 	width:25px;
 	height:25px;
-	background-image:url(/images/tg.png);
+	background-image:url(images/tg.png);
 	background-size: contain;
 }
 .start{
 	border:1px solid cyan;
 	width:25px;
 	height:25px;
-	background-image:url(/images/cl.png);
+	background-image:url(
+		images/cl.png);
 	background-color:white;
 	background-size: contain;
 }

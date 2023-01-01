@@ -1,5 +1,5 @@
 var ids = ['popnxt', 'popprev'];
-var images = ['/images/node.png', '/images/wall.png'];
+var images = ['images/node.png', 'images/wall.png'];
 var content = [
     'Click on node and hover over board to move node, Click again to stop',
     'Click on blank cell and hover over board to add walls, Click again to stop.'

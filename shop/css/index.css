@@ -1,0 +1,17 @@
+.create_btn:hover{
+	border:0px solid;
+	color:#28a745;
+	background-color:transparent;
+}
+.create_btn{
+	border:0px solid;
+	color:blue;
+	background-color:transparent;
+}
+.get_in{				
+	border-radius:5px;
+	width:100%;
+	background-color:#28a745;
+	border:0px;
+	color:white;
+}

@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://tanaykulkarni27.github.io/shop/css/index.css">
+		<link rel="icon" href="https://tanaykulkarni27.github.io/shop/images/logo.png" type="image/icon type">
+	</head>
+	<body>				
+		<nav style="" class="navbar navbar-expand-lg navbar-light bg-light">
+			<img src="images/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+			<a class="navbar-brand" href="#">YOUR SITE NAME</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Cart</a>
+					</li>
+					<li class="nav-item dropdown">
+						<button style="border:0px solid red;background-color:transparent;" id="menu_head" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  Accounts
+						</button>
+						<div id="menu_items" style="" class="dropdown-menu" aria-labelledby="navbarDropdown">
+						  <p class="dropdown-item" style="background-color:transparent;"><button class="get_in">Sign In</button><br>New Customer? <a href="https://tanaykulkarni27.github.io/shop/create_account.html" class="create_btn">Create Account</a></p>
+						</div>
+					</li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form>
+			</div>
+		</nav>
+		<br>
+			<div id="row" class="row">
+				<!-- PRODUCT 1 -->
+				<div class="col">
+					<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="images/test.png" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title" style="font-family:'Inconsolata', monospace;color:black;font-weight:bold;">Product name</h5>
+						<p class="card-text" style="color:black;">Price and description</p>
+						<a href="#" class="btn btn-primary" style="background-color:red;">BUY</a>
+					</div>
+					</div>
+				</div>
+				<!-- PRODUCT 2 -->
+				<div class="col">
+					<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="images/test.png" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title" style="font-family:'Inconsolata', monospace;color:black;font-weight:bold;">Product name</h5>
+						<p class="card-text" style="color:black;">Price and description</p>
+						<a href="#" class="btn btn-primary" style="background-color:red;">BUY</a>
+					</div>
+					</div>
+				</div>
+				<!-- PRODUCT 3 -->
+				<div class="col">
+					<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="images/test.png" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title" style="font-family:'Inconsolata', monospace;color:black;font-weight:bold;">Product name</h5>
+						<p class="card-text" style="color:black;">Price and description</p>
+						<a href="#" class="btn btn-primary" style="background-color:red;">BUY</a>
+					</div>
+					</div>
+				</div>
+				<!-- PRODUCT 4 -->
+				<div class="col">
+					<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="images/test.png" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title" style="font-family:'Inconsolata', monospace;color:black;font-weight:bold;">Product name</h5>
+						<p class="card-text" style="color:black;">Price and description</p>
+						<a href="#" class="btn btn-primary" style="background-color:red;">BUY</a>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "110283404728296");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v11.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<!-- BOOTSTRAP  -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<!-- BOOTSTRAP -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="/css/index.css" rel="stylesheet">
+		<script src="/js/index.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/css/pop.css">
+		<script src="/js/pop.js"></script>
+	</head>
+	<body onload="load()">
+		<h1 align="center">Pathfinder</h1>
+		<button id= "x" type="button" style="display: none;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong"></button>
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" style="background-color: white;" role="document">
+           <div id="howto" style="display: none;">
+                <div align="center" class="body" width="100%">
+                    <h2>How to use?</h2>
+                    <img src="/images/node.png" height="322px" id="popimg" class="popimg"><br>      
+                    <h4 align="center" id="popcontent">
+                        Click on node and hover over board to move node, Click again to stop
+                    </h4>    
+                    <button id="popnxt" onclick="change()">Next</button>
+                    <button id="popprev" style="display: none;" onclick="change()">Previous</button>
+                    <button id="popnxt" style="position: relative;margin-left: 15px; float: left;" onclick="document.getElementById('x').click();">Close</button>
+                    <br>
+                    <br>
+                </div>
+           </div>
+           <div align="center" id="what is">
+            <h1 style="margin-top: 15px;">What is pathfinder?</h1>
+            <h3>
+                Pathfinder is project that finds the shortest path<br>
+                which find the shortest path from <b>Start Node, Weight node and End Node.<br></b>
+                You can add walls to change the shortest path.
+            </h3>
+            <button onclick="document.getElementById('what is').style.display='none';
+                             document.getElementById('howto').style.display='block';">Next</button>
+            <br><br>
+           </div>
+        </div>
+    </div>
+    <!-- HTML CODE TO ADD END -->
+		<button class="btn" onclick="BFS(0)">FIND PATH</button>
+		<button class="btn" onclick="load()">CLEAR BOARD</button>
+		<button class="btn" onclick="load_tutorial()">TUTORIAL</button>
+		<!-- START POINT CODE -->
+	&nbsp;&nbsp;&nbsp;&nbsp;<br><br><br><img src="/images/cl.png" style="width: 15px;margin-left: 30px;">&nbsp;START NODE
+		<!-- EXTRA NODE CODE -->
+	&nbsp;&nbsp;&nbsp;&nbsp;<img src="/images/weight.png" style="width: 15px;">&nbsp;WEIGHT NODE
+	<!-- END POINT CODE -->
+	&nbsp;&nbsp;&nbsp;&nbsp;<img src="/images/tg.png" style="width: 15px;">&nbsp;END NODE
+	<!-- VISITED CELL CODE -->
+	&nbsp;&nbsp;&nbsp;&nbsp;<img src="/images/visited.png" style="width: 15px;">&nbsp;VISITED NODE
+	<!-- PATH CODE -->
+	&nbsp;&nbsp;&nbsp;&nbsp;<img src="/images/path.jpeg" style="width: 15px;">&nbsp;PATH<br><br>
+		<div class="board" align="center">
+			<div id="row" class="grid">
+				
+			</div>
+		</div>
+	</body>
+</html>

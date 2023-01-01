@@ -1,0 +1,235 @@
+{
+  "message" : "Data fetch successfully",
+  "data" : [ {
+    "id" : 13,
+    "sender" : "yk@gmail.com",
+    "receiver" : "bs@gmail.com",
+    "message" : "fine",
+    "caption" : "",
+    "uploadfiles" : null,
+    "type" : "",
+    "time" : "03:28:53 PM",
+    "chatdate" : {
+      "year" : 2022,
+      "month" : "JANUARY",
+      "dayOfMonth" : 19,
+      "dayOfWeek" : "WEDNESDAY",
+      "era" : "CE",
+      "dayOfYear" : 19,
+      "leapYear" : false,
+      "monthValue" : 1,
+      "chronology" : {
+        "id" : "ISO",
+        "calendarType" : "iso8601"
+      }
+    }
+  }, {
+    "id" : 12,
+    "sender" : "bs@gmail.com",
+    "receiver" : "yk@gmail.com",
+    "message" : "how are u ?",
+    "caption" : "",
+    "uploadfiles" : null,
+    "type" : "",
+    "time" : "03:28:46 PM",
+    "chatdate" : {
+      "year" : 2022,
+      "month" : "JANUARY",
+      "dayOfMonth" : 19,
+      "dayOfWeek" : "WEDNESDAY",
+      "era" : "CE",
+      "dayOfYear" : 19,
+      "leapYear" : false,
+      "monthValue" : 1,
+      "chronology" : {
+        "id" : "ISO",
+        "calendarType" : "iso8601"
+      }
+    }
+  }, {
+    "id" : 11,
+    "sender" : "yk@gmail.com",
+    "receiver" : "bs@gmail.com",
+    "message" : "hi !",
+    "caption" : "",
+    "uploadfiles" : null,
+    "type" : "",
+    "time" : "03:28:10 PM",
+    "chatdate" : {
+      "year" : 2022,
+      "month" : "JANUARY",
+      "dayOfMonth" : 19,
+      "dayOfWeek" : "WEDNESDAY",
+      "era" : "CE",
+      "dayOfYear" : 19,
+      "leapYear" : false,
+      "monthValue" : 1,
+      "chronology" : {
+        "id" : "ISO",
+        "calendarType" : "iso8601"
+      }
+    }
+  }, {
+    "id" : 10,
+    "sender" : "bs@gmail.com",
+    "receiver" : "yk@gmail.com",
+    "message" : "hey hi",
+    "caption" : "",
+    "uploadfiles" : null,
+    "type" : "",
+    "time" : "03:28:01 PM",
+    "chatdate" : {
+      "year" : 2022,
+      "month" : "JANUARY",
+      "dayOfMonth" : 19,
+      "dayOfWeek" : "WEDNESDAY",
+      "era" : "CE",
+      "dayOfYear" : 19,
+      "leapYear" : false,
+      "monthValue" : 1,
+      "chronology" : {
+        "id" : "ISO",
+        "calendarType" : "iso8601"
+      }
+    }
+  }, {
+    "id" : 9,
+    "sender" : "yk@gmail.com",
+    "receiver" : "vj@gmail.com",
+    "message" : "yeah....",
+    "caption" : "",
+    "uploadfiles" : null,
+    "type" : "",
+    "time" : "03:26:50 PM",
+    "chatdate" : {
+      "year" : 2022,
+      "month" : "JANUARY",
+      "dayOfMonth" : 19,
+      "dayOfWeek" : "WEDNESDAY",
+      "era" : "CE",
+      "dayOfYear" : 19,
+      "leapYear" : false,
+      "monthValue" : 1,
+      "chronology" : {
+        "id" : "ISO",
+        "calendarType" : "iso8601"
+      }
+    }
+  }, {
+    "id" : 8,
+    "sender" : "vj@gmail.com",
+    "receiver" : "yk@gmail.com",
+    "message" : "done ??",
+    "caption" : "",
+    "uploadfiles" : null,
+    "type" : "",
+    "time" : "03:26:42 PM",
+    "chatdate" : {
+      "year" : 2022,
+      "month" : "JANUARY",
+      "dayOfMonth" : 19,
+      "dayOfWeek" : "WEDNESDAY",
+      "era" : "CE",
+      "dayOfYear" : 19,
+      "leapYear" : false,
+      "monthValue" : 1,
+      "chronology" : {
+        "id" : "ISO",
+        "calendarType" : "iso8601"
+      }
+    }
+  }, {
+    "id" : 7,
+    "sender" : "yk@gmail.com",
+    "receiver" : "vj@gmail.com",
+    "message" : "hello ",
+    "caption" : "",
+    "uploadfiles" : null,
+    "type" : "",
+    "time" : "03:26:22 PM",
+    "chatdate" : {
+      "year" : 2022,
+      "month" : "JANUARY",
+      "dayOfMonth" : 19,
+      "dayOfWeek" : "WEDNESDAY",
+      "era" : "CE",
+      "dayOfYear" : 19,
+      "leapYear" : false,
+      "monthValue" : 1,
+      "chronology" : {
+        "id" : "ISO",
+        "calendarType" : "iso8601"
+      }
+    }
+  }, {
+    "id" : 6,
+    "sender" : "vj@gmail.com",
+    "receiver" : "yk@gmail.com",
+    "message" : "hi",
+    "caption" : "",
+    "uploadfiles" : null,
+    "type" : "",
+    "time" : "03:26:13 PM",
+    "chatdate" : {
+      "year" : 2022,
+      "month" : "JANUARY",
+      "dayOfMonth" : 19,
+      "dayOfWeek" : "WEDNESDAY",
+      "era" : "CE",
+      "dayOfYear" : 19,
+      "leapYear" : false,
+      "monthValue" : 1,
+      "chronology" : {
+        "id" : "ISO",
+        "calendarType" : "iso8601"
+      }
+    }
+  }, {
+    "id" : 5,
+    "sender" : "yk@gmail.com",
+    "receiver" : "1",
+    "message" : "",
+    "caption" : "",
+    "uploadfiles" : "https://usersimagesapp.s3.ap-south-1.amazonaws.com/profileImages//1642581208701-quino-al--3KfR1GVKXY-unsplash.jpg",
+    "type" : "image",
+    "time" : "02:03:24 PM",
+    "chatdate" : {
+      "year" : 2022,
+      "month" : "JANUARY",
+      "dayOfMonth" : 19,
+      "dayOfWeek" : "WEDNESDAY",
+      "era" : "CE",
+      "dayOfYear" : 19,
+      "leapYear" : false,
+      "monthValue" : 1,
+      "chronology" : {
+        "id" : "ISO",
+        "calendarType" : "iso8601"
+      }
+    }
+  }, {
+    "id" : 4,
+    "sender" : "yk@gmail.com",
+    "receiver" : "1",
+    "message" : "ok",
+    "caption" : "",
+    "uploadfiles" : null,
+    "type" : "",
+    "time" : "01:56:35 PM",
+    "chatdate" : {
+      "year" : 2022,
+      "month" : "JANUARY",
+      "dayOfMonth" : 19,
+      "dayOfWeek" : "WEDNESDAY",
+      "era" : "CE",
+      "dayOfYear" : 19,
+      "leapYear" : false,
+      "monthValue" : 1,
+      "chronology" : {
+        "id" : "ISO",
+        "calendarType" : "iso8601"
+      }
+    }
+  } ],
+  "success" : true
+}

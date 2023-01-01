@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SOME TITLE</title>
+	<script src="index.js" type="text/javascript"> </script>
+	<style type="text/css">
+		.documentation{
+			width: 80%;
+		}
+		.close_btn:hover{
+			cursor: pointer;
+		}
+		.close_btn{
+			background-color: transparent;;
+			margin-right: 20px;
+			float: right;
+			color: gray;
+			font-size: 25px;
+			width: 30px;
+			height: 30px;
+			font-weight: bold;
+			border: 0px;
+		}
+		.font{
+			font-size: 25px;
+			font-weight: bold;
+		}
+		.mains{
+			font-family: "Lucida Console", "Courier New", monospace;
+		}
+	</style>
+</head>
+<body onload="f()">
+	<center>
+	<div id="documentation" class="documentation" style="border:1px solid black;" align="center">
+		<center>
+			<p>
+				<font class="font">How to use ?</font> <span>
+					<button class="close_btn" onclick="close_form()">&times;</button>
+				</span>
+				<div width="100%" style="background-color: lightgray;height: 30px;font-size: 25px;">
+						<p align="left" style="margin-left: 50px;">["B"text in bold] <b>&nbsp;&nbsp;&nbsp;text in bold</b> (syntax for bold words)</p>
+				</div>
+				<div width="100%" style="background-color: lightgray;height: 30px;font-size: 25px;">
+						<p align="left" style="margin-left: 50px;">["I"Italic Text] <i>&nbsp;&nbsp;&nbsp;Italic Text</i> (syntax for italic words)</p>
+				</div>
+				<div width="100%" style="background-color: lightgray;height: 30px;font-size: 25px;">
+						<p align="left" style="margin-left: 50px;">["A"Underlined text] &nbsp;&nbsp;&nbsp;<ins>Underlined text</ins> (syntax for underline words)</p>
+				</div>
+				<div width="100%" style="background-color: lightgray;height: 30px;font-size: 25px;">
+						<p align="left" style="margin-left: 50px;">["URL:https://google.com"goto url] &nbsp;&nbsp;&nbsp;<a href="https://google.com">goto url</a> (syntax for attaching url sentence)</p>
+				</div>
+			</p>
+		</center>
+	</div>
+	</center>
+	<table>
+		<tr>
+			<td>
+				<div id="main_page">
+					<button onclick="append_bold()"><b class="mains">B</b></button>
+					<button onclick="append_underline()"><ins class="mains">U</ins></button>
+					<button onclick="append_italic()"><i class="mains">I</i></button>
+					<button onclick="append_url()">attach url</button><br><br>
+
+					<textarea onkeyup = "decode()" id = "txt" style = "width:500px;height:500px;resize:none;"></textarea>
+					<br>
+<!-- 					<button onclick="decode()"> PREVIEW</button> -->
+		    		</div>
+			</td>
+			<td>
+				<div id="PREVIEW"></div>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+

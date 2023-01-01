@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Async Task</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#some").click(function(){
+				$.ajax({
+				type : "GET",
+				url : "https://tanaykulkarni27.github.io/json_parsing/DATA.json",
+				beforeSend:function(){
+					$("#loader").show();
+				},
+				success:function(data){
+					$("#loader").hide();
+					$("#TAB").show();
+					var arr = data['items'];
+					var gp = [['NAMES','VALUES']];
+					for(let i = 0;i<arr.length;i++){
+	            		gp.push([arr[i]['NAME'],arr[i]['VALUE']]);
+	        		}
+	        		google.charts.load("current", {packages:["bar"]});
+			        const x = function(){
+			            var view = new google.visualization.arrayToDataTable(gp);
+			            var options = {
+			                title: "           ",
+			                width: 'device-width',
+			                height: 'device-height',
+			                 bars: 'vertical',
+			                bar: {groupWidth: "100%"},
+			                legend: { position: "none" },
+			            };
+			            var chart = new google.charts.Bar(document.getElementById("TAB"));
+			            chart.draw(view, google.charts.Bar.convertOptions(options));
+			            // chart.draw(view,options);   
+			        };
+			        google.charts.setOnLoadCallback(x);
+				}
+			});
+			});
+			});
+	</script>
+	<style type="text/css">
+		html, body { height: 100%; width: 100%; margin: 0; }
+		.loader{
+			display: none;
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			margin-top: 200px;
+			margin-left: 200px;
+			background-color: white;
+			border: 12px solid white;
+			border-top:12px solid orange;
+			border-radius: 50%;
+			animation : spinner 3s infinite;
+		}
+		@keyframes spinner{
+			0%{   transform:rotate(0deg); }
+			100%{  transform:rotate(360deg); }
+		}
+	</style>
+</head>
+<body>
+	<button id="some">LOAD</button>
+<center>
+	<div class="loader" id="loader"></div>
+</center>
+<div id="TAB" style="width:100%;display: none;"></div>
+</body>
+</html>

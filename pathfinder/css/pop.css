@@ -1,0 +1,18 @@
+.img{
+    border:1px solid black;
+    height: 322px;
+    font-family: 'Roboto', sans-serif;
+}
+button{
+    border: 1px solid black;
+    background-color: transparent;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+h1,h2,h3{
+    font-family: 'Roboto', sans-serif;
+}

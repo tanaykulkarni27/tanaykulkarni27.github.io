@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<link rel="icon" href="https://tanaykulkarni27.github.io/shop/images/logo.png" type="image/icon type">
+		<script>
+			function handle(i){
+				if(i.id == "show"){
+					document.getElementById("pwd").type = "text";
+					document.getElementById("hide").style.display = "block";
+					i.style.display = "none";
+					return;
+				}else{
+					document.getElementById("pwd").type = "password";
+					document.getElementById("show").style.display = "block";
+					i.style.display = "none";
+					
+					return;
+				}
+			}
+		</script>
+		<style>	
+			.submit_button:hover{
+				background-color:#28a745;
+				color:white;
+				border:0px;
+				border-radius:5px;
+				width:15em;
+				height:2.5em;
+			}		
+			.submit_button{
+				width:15em;
+				height:2.5em;
+				color:#28a745;
+				border:1px solid #28a745;
+				border-radius:5px;
+			}		
+			.text_box:hover{				
+				border:2px solid #28a745;
+			}
+			.text_box{
+				float:left;
+			}
+			.eye_btn{
+				border:0px solid;
+				background-color:transparent;
+			}
+		</style>
+	</head>
+	<body>
+		<div align="center">
+			<div class="card" style="margin-top:15px;width: 38rem;box-shadow:2px 2px 1px gray;">
+				<form>
+					<div class="card-body">
+						<h3 style="float:left;" class="card-title" style="text-shadow:2px 2px 1px gray;">Create account</h3>
+						<div class="form-group">						
+							<input id="fname" class="form-control" type="text" class="text_box" placeholder="Firstname"><br>
+							<input id="lname" class="form-control" type="text" class="text_box" placeholder="Lastname"><br>
+							<textarea class="form-control" style="resize:none;" placeholder="Address"></textarea><br>
+							<input type="text" class="form-control" placeholder="email"><br>
+							<input type="text" class="form-control" placeholder="Mobile number"><br>
+							<div class="input-group mb-3">
+								<input id="pwd" type="password" class="form-control" placeholder="Password">
+								<div class="input-group-append">
+									<span class="input-group-text" id="basic-addon1"><button  type="button" onclick="handle(this)" id = "show" class="eye_btn"><i class="fa fa-eye"></i></button><button type="button" onclick="handle(this)" id = "hide" style="display:none;" class="eye_btn"><i class="fa fa-eye-slash"></i></button></span>
+								</div>
+							</div>						
+							<input type="password" class="form-control" placeholder="Re-enter password"><br>
+						</div>
+					</div>
+					<input type="submit" class="submit_button"class="" value="Get In">
+				</form>
+			</div>
+		</div>
+		
+	</body>
+</html>

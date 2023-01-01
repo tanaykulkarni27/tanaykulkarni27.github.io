@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>SORTING VISUALIZER</title>
+	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript">
+		// var slider = document.getElementById("size");
+		// alert(slider.value);
+	</script>
+	<style type="text/css">
+		.BAR{
+
+			float: left;
+			margin-left: 2px;
+			margin-bottom: 10px;
+			font-size: 15px;
+			color: green;
+			background-color:cyan;
+		}
+	.btn{
+		float:left;
+		vertical-align: center;
+		background-color: transparent;
+		border: 0px solid transparent;
+		color: white;
+		margin-top: 10px;	
+		margin-left: 25px;
+	}
+	.head{
+		width:100%;
+		vertical-align: center;
+		background-color: #182c40;
+		height: 50px;
+/*		position: sticky;*/
+
+	}
+	.tdcell{
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.slider{
+		margin-top: 15px;	
+		margin-left: 25px;
+		  -webkit-appearance: none;
+		  height: 5px;
+		  border-radius: 5px;
+		  background: white;
+		  outline: none;
+		  opacity: 0.7;
+		  -webkit-transition: .2s;
+		  transition: opacity .2s;
+	}
+	.slider::-moz-range-thumb {
+  		border-radius: 50%;
+	}
+	.slide{
+		color:white;
+	}
+	.sld{
+		color:white;
+		background-color:transparent;
+		border:0px solid transparent;
+		margin-top:2px;
+	}
+
+	</style>
+</head>
+<body onload="load()">
+<div class="head">
+	<button onclick="selection_sort()" class="btn">TRY SELECTION SORT </button>
+	<button onclick="quicksort()" class="btn">TRY QUICK SORT </button>
+	<button onclick="load()" class="btn">GENERATE NEW ARRAY</button>			
+
+	<button onclick="" class="sld">		
+		<input type="range" min="5" max="70" value="70" oninput="load()" class="slider" id="size">
+	</button>
+	<button onclick="" class="sld">		
+			SPEED AND SIZE OF ARRAY
+	</button>	
+
+		 
+</div>
+	<table class="over">
+	<tr >
+		<td align="center" class = "board" id="board"></td>
+	</tr>
+	</table>
+	
+</body>
+</html>

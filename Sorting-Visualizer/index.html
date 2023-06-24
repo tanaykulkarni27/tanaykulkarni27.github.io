@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title"></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/sort_visualizer.css">
+    <script type="module" src="./js/sort.js"></script>
+<body>
+    <nav>
+        <div id="navigation" >
+            <ul class="navigation-list" style="margin-bottom: 0!important;">
+                <li class="navigation-item" ><a href="./">&lt;wizsalgo/&gt;</a></li>
+                <li id="shuffle" class="navigation-item">Generate New</li>
+                <li class="navigation-item">
+                    <select class="dp_menu" name="sorting_type" id="sorting_type">
+                    <option class="dp_menu_option" value="bubble">Bubble sort</option>
+                    <option class="dp_menu_option" value="selection">Selection sort</option>
+                    <option class="dp_menu_option" value="quicksort">Quicksort</option>
+                    <option class="dp_menu_option" value="insertion">Insertion sort</option>
+                    <option class="dp_menu_option" value="mergesort">Merge sort</option>
+                    <option class="dp_menu_option" value="heap">Heap sort</option>
+                  </select>
+                </li>
+                <li class="navigation-item" id="sort">sort</li>
+                <li class="navigation-item" style="vertical-align: center !important;"><div><input style="margin-top: 0px;margin-bottom: 0px;"type="range" value="15" id="range" min="5" max="70"></div></li>
+                <li class="navigation-item" id="size" style="background-color: white;color:black;">1</li>        
+                
+            </ul>
+        </div>
+    </nav>
+    <h3 id="ses"></h3>
+    <div id="labels" class="labels"></div>
+    <div id="bar-container"></div> 
+    
+    <div style="margin-top:30px;"></div>
+    <%- include('navigation/footer.ejs'); %>
+</body>
+</html>

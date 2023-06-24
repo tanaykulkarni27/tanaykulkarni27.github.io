@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title"></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/graph_visualizer.css">
+    <script type="module" src="./js/graph.js"></script>
+<body>
+    <nav>
+    <div id="navigation" style="height: max-content;">
+        <ul class="navigation-list" style="margin-bottom: 0!important;">
+            <li class="navigation-item" ><a href="./" style="text-decoration: none !important;">&lt;wizsalgo/&gt;</a></li>
+            <li class="navigation-item">
+                <select class="dp_menu" name="sorting_type" id="sorting_type">
+                <option class="dp_menu_option" value="dfs">BFS</option>
+                <option class="dp_menu_option" value="bfs">DFS</option>
+              </select>
+            </li>
+            <li class="navigation-item" id="reset">Reset</li>
+            <li class="navigation-item" id="clear">Clear</li>
+            <li class="navigation-item" id="Add_edge">Add Edge</li>
+            <li class="navigation-item" id="Delete_node">Delete Node</li>
+            <li class="navigation-item" id="Add_node">Add Node</li>
+            <li class="navigation-item" id="Start">Start</li>
+            <li class="navigation-item"></li>
+        </ul>
+    </div>
+</nav>
+    <div id="board" style="margin-top: 15px;"></div>
+</body>
+</html>

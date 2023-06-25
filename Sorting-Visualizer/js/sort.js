@@ -56,6 +56,10 @@ $(document).ready(()=>{
             <span class="label_icon" style="background-color:rgb(185,45,185) !important;">&nbsp;&nbsp;</span><span>Divided array part 2</span>`;
             arr = await merge_sort(arr,speed[Math.max(0,array.length - 6)]);
         }
+
+        if(STYP != 'heap' && STYP != 'mergesort')
+        document.getElementById('labels').innerHTML = '';
+            
         else if(sorting_type == 'heap')
             arr = await heap_sort(arr,speed[Math.max(0,array.length - 6)]);
         is_sorting = false;
@@ -98,4 +102,6 @@ function label_it(){
     }else if(STYP == 'heap'){
         document.getElementById('labels').innerHTML = `<span class="label_icon" style="background-color:yellow !important;">&nbsp;&nbsp;</span><span>Heapifying part</span>`;
     }
+    if(STYP != 'heap' && STYP != 'mergesort')
+        document.getElementById('labels').innerHTML = '';
 }

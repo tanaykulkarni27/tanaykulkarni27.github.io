@@ -8,7 +8,7 @@ import {heap_sort} from './Algorithms/Sorting/heap_sort.js';
 var arr = null;
 var is_sorting = false;
 var previous_size = 70;
-var def_params = "?type=bubble";
+var def_params = "?type=mergesort";
 $(document).ready(()=>{
     
     // Getting bar size

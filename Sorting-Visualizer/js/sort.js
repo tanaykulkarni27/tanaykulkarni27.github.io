@@ -52,13 +52,11 @@ $(document).ready(()=>{
         else if(sorting_type == 'insertion')
             arr = await insertion_sort(arr,speed[Math.max(0,array.length - 6)]);
         else if(sorting_type == 'mergesort'){
-            document.getElementById('labels').innerHTML = `<span class="label_icon" style="background-color:yellow !important;">&nbsp;&nbsp;</span><span>Divided array part 1</span>
-            <span class="label_icon" style="background-color:rgb(185,45,185) !important;">&nbsp;&nbsp;</span><span>Divided array part 2</span>`;
+            // document.getElementById('labels').innerHTML = `<span class="label_icon" style="background-color:yellow !important;">&nbsp;&nbsp;</span><span>Divided array part 1</span>
+            // <span class="label_icon" style="background-color:rgb(185,45,185) !important;">&nbsp;&nbsp;</span><span>Divided array part 2</span>`;
             arr = await merge_sort(arr,speed[Math.max(0,array.length - 6)]);
-        }
-
-        if(STYP != 'heap' && STYP != 'mergesort')
-        document.getElementById('labels').innerHTML = '';
+        }else
+            document.getElementById('labels').innerHTML = '';
             
         else if(sorting_type == 'heap')
             arr = await heap_sort(arr,speed[Math.max(0,array.length - 6)]);
@@ -101,7 +99,6 @@ function label_it(){
         <span class="label_icon" style="background-color:rgb(185,45,185) !important;">&nbsp;&nbsp;</span><span>Divided array part 2</span>`;
     }else if(STYP == 'heap'){
         document.getElementById('labels').innerHTML = `<span class="label_icon" style="background-color:yellow !important;">&nbsp;&nbsp;</span><span>Heapifying part</span>`;
-    }
-    if(STYP != 'heap' && STYP != 'mergesort')
+    }else
         document.getElementById('labels').innerHTML = '';
 }
